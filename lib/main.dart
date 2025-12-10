@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Randukumbolo Template',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.green),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
       home: const HomePage(),
@@ -62,10 +62,10 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            const Icon(Icons.nature, size: 100, color: Colors.green),
+            const Icon(Icons.nature, size: 100, color: Colors.blue),
             const SizedBox(height: 20),
             const Text(
-              'Selamat Datang di\nRandukumbolo Template',
+              'Selamat Datang di\nTemplate Flutter Aplikasi',
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
             ),
@@ -114,7 +114,10 @@ class _HomePageState extends State<HomePage> {
                       itemCount: _notes.length,
                       itemBuilder: (context, index) {
                         return Card(
+                          margin: const EdgeInsets.symmetric(vertical: 8),
+                          elevation: 2,
                           child: ListTile(
+                            contentPadding: const EdgeInsets.all(12),
                             title: Text(_notes[index]),
                             trailing: IconButton(
                               icon: const Icon(Icons.delete),
@@ -168,7 +171,7 @@ class _HomePageState extends State<HomePage> {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Randukumbolo App'),
+        title: const Text('My Flutter App'),
         centerTitle: true,
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
       ),
